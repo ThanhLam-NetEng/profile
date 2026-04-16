@@ -19,11 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <style>
-      /* =============================================
-       DESIGN TOKENS
-    ============================================= */
       :root {
         --bg: #07091a;
         --bg2: #0d1228;
@@ -40,10 +36,6 @@
         --font: "Sora", sans-serif;
         --mono: "JetBrains Mono", monospace;
       }
-
-      /* =============================================
-       RESET & BASE
-    ============================================= */
       *,
       *::before,
       *::after {
@@ -98,9 +90,7 @@
         );
       }
 
-      /* =============================================
-       NAV
-    ============================================= */
+      /* NAV */
       #nav {
         position: fixed;
         top: 0;
@@ -137,11 +127,11 @@
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 1.6rem;
+        gap: 1.4rem;
         list-style: none;
       }
       .nav-links a {
-        font-size: 0.78rem;
+        font-size: 0.75rem;
         font-weight: 500;
         color: var(--muted2);
         letter-spacing: 0.06em;
@@ -153,9 +143,9 @@
       }
       .nav-cv {
         font-family: var(--mono);
-        font-size: 0.75rem;
+        font-size: 0.73rem;
         font-weight: 500;
-        padding: 0.42rem 1rem;
+        padding: 0.4rem 0.95rem;
         border: 1px solid var(--accent);
         border-radius: 6px;
         color: var(--accent);
@@ -218,9 +208,7 @@
         color: var(--text);
       }
 
-      /* =============================================
-       HERO
-    ============================================= */
+      /* HERO */
       #hero {
         position: relative;
         min-height: 100vh;
@@ -384,9 +372,7 @@
         }
       }
 
-      /* =============================================
-       SHARED
-    ============================================= */
+      /* SHARED */
       section {
         padding: 6rem 2rem;
       }
@@ -429,9 +415,7 @@
         transform: none;
       }
 
-      /* =============================================
-       EXPERIENCE
-    ============================================= */
+      /* EXPERIENCE */
       #experience {
         background: var(--bg2);
       }
@@ -513,30 +497,16 @@
         color: var(--text);
         font-weight: 500;
       }
-      .exp-placeholder {
-        font-family: var(--mono);
-        font-size: 0.78rem;
-        color: var(--muted);
-        border: 1px dashed var(--border2);
-        border-radius: 8px;
-        padding: 0.7rem 1rem;
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .exp-placeholder i {
-        color: var(--accent2);
-      }
 
-      /* =============================================
-       PROJECTS & CERTS (shared grid)
-    ============================================= */
+      /* CARDS GRID — shared by Projects, Lab, Certs */
       #projects {
         background: var(--bg);
       }
-      #certifications {
+      #lab {
         background: var(--bg2);
+      }
+      #certifications {
+        background: var(--bg);
       }
       .projects-grid {
         display: grid;
@@ -609,6 +579,11 @@
         background: rgba(167, 139, 250, 0.08);
         border-color: rgba(167, 139, 250, 0.25);
       }
+      .project-type.personal {
+        color: #34d399;
+        background: rgba(52, 211, 153, 0.08);
+        border-color: rgba(52, 211, 153, 0.25);
+      }
       .project-period {
         font-family: var(--mono);
         font-size: 0.68rem;
@@ -630,6 +605,11 @@
       .project-desc strong {
         color: var(--text);
         font-weight: 500;
+      }
+      .project-desc code {
+        font-family: var(--mono);
+        font-size: 0.82em;
+        color: var(--accent);
       }
       .project-tags {
         display: flex;
@@ -666,11 +646,9 @@
         transform: translateX(3px);
       }
 
-      /* =============================================
-       SKILLS
-    ============================================= */
+      /* SKILLS */
       #skills {
-        background: var(--bg);
+        background: var(--bg2);
       }
       .skills-grid {
         display: grid;
@@ -678,7 +656,7 @@
         gap: 1.6rem;
       }
       .skill-group {
-        background: var(--bg2);
+        background: var(--bg3);
         border: 1px solid var(--border);
         border-radius: 14px;
         padding: 1.5rem;
@@ -703,7 +681,7 @@
         font-family: var(--mono);
         font-size: 0.72rem;
         color: var(--text);
-        background: var(--bg3);
+        background: var(--bg4);
         border: 1px solid rgba(255, 255, 255, 0.07);
         padding: 0.28rem 0.75rem;
         border-radius: 6px;
@@ -718,11 +696,9 @@
         background: rgba(0, 212, 200, 0.06);
       }
 
-      /* =============================================
-       ABOUT
-    ============================================= */
+      /* ABOUT */
       #about {
-        background: var(--bg2);
+        background: var(--bg);
       }
       .about-grid {
         display: grid;
@@ -777,7 +753,7 @@
         margin-bottom: 1rem;
       }
       .stat-card {
-        background: var(--bg3);
+        background: var(--bg2);
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 1.4rem 1.2rem;
@@ -797,7 +773,7 @@
         line-height: 1.4;
       }
       .about-info {
-        background: var(--bg3);
+        background: var(--bg2);
         border: 1px solid var(--border);
         border-radius: 12px;
         overflow: hidden;
@@ -831,11 +807,9 @@
         font-size: 0.85rem;
       }
 
-      /* =============================================
-       CONTACT
-    ============================================= */
+      /* CONTACT */
       #contact {
-        background: var(--bg);
+        background: var(--bg2);
       }
       .contact-inner {
         max-width: 640px;
@@ -862,7 +836,7 @@
       .contact-form input,
       .contact-form textarea {
         width: 100%;
-        background: var(--bg2);
+        background: var(--bg3);
         border: 1px solid var(--border);
         border-radius: 10px;
         padding: 0.85rem 1.1rem;
@@ -982,9 +956,7 @@
         }
       }
 
-      /* =============================================
-       RESPONSIVE
-    ============================================= */
+      /* RESPONSIVE */
       @media (max-width: 768px) {
         .nav-links,
         .nav-cv {
@@ -1024,12 +996,13 @@
     </style>
   </head>
   <body>
-    <!-- NAV -->
+    <!-- ── NAV ── -->
     <nav id="nav">
       <div class="nav-logo">ptl<span>.</span></div>
       <ul class="nav-links">
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#lab">Lab</a></li>
         <li><a href="#certifications">Certs</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#about">About</a></li>
@@ -1044,6 +1017,7 @@
     <div class="nav-mobile" id="mobileMenu">
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#lab">Lab</a>
       <a href="#certifications">Certs</a>
       <a href="#skills">Skills</a>
       <a href="#about">About</a>
@@ -1053,7 +1027,7 @@
       >
     </div>
 
-    <!-- HERO -->
+    <!-- ── HERO ── -->
     <section id="hero">
       <div class="dot-bg"></div>
       <div class="hero-glow"></div>
@@ -1076,13 +1050,12 @@
           <a href="#contact" class="btn-outline">Get in Touch</a>
         </div>
       </div>
-      <a href="#experience" class="hero-scroll">
-        scroll<br /><i class="fa-solid fa-chevron-down"></i>
-      </a>
+      <a href="#experience" class="hero-scroll"
+        >scroll<br /><i class="fa-solid fa-chevron-down"></i
+      ></a>
     </section>
 
-    <!-- EXPERIENCE -->
-    <!-- TODO: Cập nhật sau khi thực tập xong tháng 6/2026 -->
+    <!-- ── EXPERIENCE ── -->
     <section id="experience">
       <div class="container">
         <div class="reveal" style="margin-bottom: 2.5rem">
@@ -1107,30 +1080,34 @@
             Chí Minh
           </div>
           <ul class="exp-list">
-            <!-- TODO: Thay bằng công việc thực tế sau khi xong thực tập -->
             <li>
-              Configuring and maintaining enterprise-grade network
-              infrastructure in a production environment.
+              Configured and tested <strong>F-DDH BOX</strong> security
+              appliance end-to-end — static IP setup, admin interface, C2
+              traffic blocking (ICMP/TCP), and log monitoring via email alerts.
+              Authored the internal configuration guide. Deployed and demoed the
+              product on-site at <strong>Viettel Đắk Lắk</strong> and the
+              <strong>Tây Ninh Innovation Center</strong> exhibition.
             </li>
             <li>
-              Hands-on work with Cisco switches, SD-WAN solutions, and security
-              appliances under senior engineer guidance.
+              Performed <strong>Cisco Catalyst 9200L IOS upgrade</strong> (to
+              v17.12) and StackWise dual-switch stacking in production; analyzed
+              Cisco RMA email workflows and independently drafted a warranty
+              initiation request that was approved and processed by mentor.
             </li>
             <li>
-              Supporting deployment and troubleshooting tasks across client
-              sites, including data center operations.
+              Studied <strong>Peplink BPL-2500EC SD-WAN</strong> architecture
+              and real-world deployment for the White Palace venue project;
+              attended SpeedFusion / Link Load Balancing webinar. Diagnosed and
+              supported repair of a Layer 3 Cisco switch outage caused by a
+              <strong>4-core fiber cut</strong> at White Palace Bình Tân.
             </li>
           </ul>
-          <div class="exp-placeholder">
-            <i class="fa-solid fa-circle-info"></i>
-            Full responsibilities to be updated upon completion — Jun 2026
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <!-- Thêm project: copy 1 block .project-card và điền thông tin -->
+    <!-- ── PROJECTS ── -->
+    <!-- Thêm project mới: copy 1 block .project-card và điền thông tin -->
     <section id="projects">
       <div class="container">
         <div class="reveal" style="margin-bottom: 3rem">
@@ -1139,7 +1116,6 @@
           <div class="section-divider"></div>
         </div>
         <div class="projects-grid">
-          <!-- Thesis -->
           <div class="project-card reveal">
             <div class="project-meta">
               <span class="project-type">Thesis</span>
@@ -1169,7 +1145,6 @@
             </div>
           </div>
 
-          <!-- SDN LB -->
           <div class="project-card reveal">
             <div class="project-meta">
               <span class="project-type">Academic</span>
@@ -1197,12 +1172,10 @@
               href="https://github.com/ThanhLam-NetEng/Server-Load-Balancing"
               target="_blank"
               class="project-link"
-            >
-              View on GitHub <i class="fa-solid fa-arrow-right"></i>
-            </a>
+              >View on GitHub <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
 
-          <!-- LibreNMS -->
           <div class="project-card reveal">
             <div class="project-meta">
               <span class="project-type">Academic</span>
@@ -1222,7 +1195,6 @@
             </div>
           </div>
 
-          <!-- Cisco @ FSI -->
           <div class="project-card reveal">
             <div class="project-meta">
               <span class="project-type work">FSI</span>
@@ -1242,7 +1214,6 @@
             </div>
           </div>
 
-          <!-- SD-WAN @ FSI -->
           <div class="project-card reveal">
             <div class="project-meta">
               <span class="project-type work">FSI</span>
@@ -1263,7 +1234,6 @@
             </div>
           </div>
 
-          <!-- Data Center @ FSI -->
           <div class="project-card reveal">
             <div class="project-meta">
               <span class="project-type work">FSI</span>
@@ -1290,8 +1260,61 @@
       </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
-    <!-- Thay "In progress" → năm hoàn thành. Thêm CCNA khi đạt. -->
+    <!-- ── PERSONAL LAB ── -->
+    <!-- Thêm project cá nhân: copy 1 block .project-card -->
+    <section id="lab">
+      <div class="container">
+        <div class="reveal" style="margin-bottom: 2.5rem">
+          <div class="section-label">Personal Lab</div>
+          <h2 class="section-title">Side Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-meta">
+              <span class="project-type personal">Personal</span>
+              <span class="project-period">2026</span>
+            </div>
+            <h3 class="project-title">
+              Cloud-Native Secure VPN Gateway &amp; DNS Sinkhole
+            </h3>
+            <p class="project-desc">
+              Privacy-first VPN gateway on
+              <strong>AWS EC2 t3.micro (Free Tier)</strong> integrating
+              WireGuard, AdGuard Home, and Unbound into a closed-loop,
+              zero-DNS-leak pipeline:
+              <code
+                >WireGuard → AdGuard Home (port 53) → Unbound (port 5335) →
+                ICANN Root Servers</code
+              >. AdGuard blocks trackers and malicious domains (~240k rules);
+              Unbound resolves directly against root servers with DNSSEC
+              validation — eliminating all third-party DNS tracking. Resolved
+              Ubuntu <code>systemd-resolved</code> port-53 conflict via custom
+              override. Results: <strong>&lt;5ms cached DNS latency</strong>,
+              ~25% background telemetry blocked, memory footprint kept under
+              150MB.
+            </p>
+            <div class="project-tags">
+              <span class="tag">WireGuard</span
+              ><span class="tag">AdGuard Home</span
+              ><span class="tag">Unbound</span><span class="tag">DNSSEC</span
+              ><span class="tag">AWS EC2</span
+              ><span class="tag">DNS Sinkhole</span
+              ><span class="tag">Ubuntu</span><span class="tag">FinOps</span>
+            </div>
+            <a
+              href="https://github.com/ThanhLam-NetEng/aws-secure-vpn-gateway"
+              target="_blank"
+              class="project-link"
+              >View on GitHub <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CERTIFICATIONS ── -->
+    <!-- Thay "In progress" → năm hoàn thành khi xong. Thêm CCNA khi đạt. -->
     <section id="certifications">
       <div class="container">
         <div class="reveal" style="margin-bottom: 2.5rem">
@@ -1302,8 +1325,8 @@
         <div class="projects-grid">
           <div class="project-card reveal">
             <div class="project-meta">
-              <span class="project-type cert">Cisco NetAcad</span>
-              <span class="project-period">In progress</span>
+              <span class="project-type cert">Cisco NetAcad</span
+              ><span class="project-period">In progress</span>
             </div>
             <h3 class="project-title">Networking Basics</h3>
             <p class="project-desc">
@@ -1319,8 +1342,8 @@
 
           <div class="project-card reveal">
             <div class="project-meta">
-              <span class="project-type cert">Cisco NetAcad</span>
-              <span class="project-period">In progress</span>
+              <span class="project-type cert">Cisco NetAcad</span
+              ><span class="project-period">In progress</span>
             </div>
             <h3 class="project-title">
               Networking Devices and Initial Configuration
@@ -1337,8 +1360,8 @@
 
           <div class="project-card reveal">
             <div class="project-meta">
-              <span class="project-type cert">Cisco NetAcad</span>
-              <span class="project-period">In progress</span>
+              <span class="project-type cert">Cisco NetAcad</span
+              ><span class="project-period">In progress</span>
             </div>
             <h3 class="project-title">Endpoint Security</h3>
             <p class="project-desc">
@@ -1354,8 +1377,8 @@
 
           <div class="project-card reveal">
             <div class="project-meta">
-              <span class="project-type cert">Cisco NetAcad</span>
-              <span class="project-period">In progress</span>
+              <span class="project-type cert">Cisco NetAcad</span
+              ><span class="project-period">In progress</span>
             </div>
             <h3 class="project-title">Network Defense</h3>
             <p class="project-desc">
@@ -1372,7 +1395,7 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- ── SKILLS ── -->
     <!-- Thêm skill: thêm <span class="skill-pill">Tên skill</span> -->
     <section id="skills">
       <div class="container">
@@ -1408,6 +1431,8 @@
               <span class="skill-pill">Wazuh SIEM</span>
               <span class="skill-pill">LibreNMS</span>
               <span class="skill-pill">SNMP v2c/v3</span>
+              <span class="skill-pill">WireGuard</span>
+              <span class="skill-pill">AdGuard Home</span>
             </div>
           </div>
 
@@ -1420,6 +1445,7 @@
               <span class="skill-pill">Nested Virtualization</span>
               <span class="skill-pill">Docker</span>
               <span class="skill-pill">LAN/WAN/DMZ</span>
+              <span class="skill-pill">AWS EC2</span>
             </div>
           </div>
 
@@ -1439,7 +1465,7 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ── ABOUT ── -->
     <section id="about">
       <div class="container">
         <div class="about-grid">
@@ -1544,7 +1570,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ── CONTACT ── -->
     <section id="contact">
       <div class="container">
         <div class="contact-inner">
@@ -1611,14 +1637,14 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ── FOOTER ── -->
     <footer>
       © 2026 Phạm Thanh Lâm · Built with <span>♥</span> · Ho Chi Minh City
     </footer>
 
-    <!-- ALL JAVASCRIPT INLINE -->
+    <!-- ── JAVASCRIPT ── -->
     <script>
-      /* NAV scroll effect */
+      /* Nav scroll */
       const nav = document.getElementById("nav");
       window.addEventListener("scroll", () => {
         nav.classList.toggle("scrolled", window.scrollY > 40);
@@ -1638,40 +1664,37 @@
         }),
       );
 
-      /* Typewriter
-       Thêm / bỏ role ở đây khi cần cập nhật */
+      /* Typewriter — thêm/bỏ role ở đây */
       const roles = [
         "Network Engineer",
         "Security Enthusiast",
         "SDN Developer",
-        "Open-source Builder",
+        "Cloud & Privacy Builder",
         "Network Automation Learner",
       ];
-      let roleIndex = 0,
-        charIndex = 0,
-        isDeleting = false;
+      let ri = 0,
+        ci = 0,
+        del = false;
       const tw = document.getElementById("typewriter");
       function type() {
-        const current = roles[roleIndex];
-        tw.textContent = isDeleting
-          ? current.slice(0, --charIndex)
-          : current.slice(0, ++charIndex);
-        if (!isDeleting && charIndex === current.length) {
-          isDeleting = true;
+        const cur = roles[ri];
+        tw.textContent = del ? cur.slice(0, --ci) : cur.slice(0, ++ci);
+        if (!del && ci === cur.length) {
+          del = true;
           setTimeout(type, 1800);
           return;
         }
-        if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
+        if (del && ci === 0) {
+          del = false;
+          ri = (ri + 1) % roles.length;
           setTimeout(type, 350);
           return;
         }
-        setTimeout(type, isDeleting ? 45 : 85);
+        setTimeout(type, del ? 45 : 85);
       }
       setTimeout(type, 900);
 
-      /* Formspree AJAX — show success message, no redirect */
+      /* Formspree AJAX */
       const form = document.getElementById("contactForm");
       const successMsg = document.getElementById("formSuccess");
       const submitBtn = document.getElementById("submitBtn");
@@ -1699,13 +1722,13 @@
         }
       });
 
-      /* Scroll reveal — chỉ chạy 1 lần mỗi phần tử */
-      const observer = new IntersectionObserver(
+      /* Scroll reveal */
+      const obs = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
             if (e.isIntersecting) {
               e.target.classList.add("visible");
-              observer.unobserve(e.target);
+              obs.unobserve(e.target);
             }
           });
         },
@@ -1714,7 +1737,7 @@
       document.querySelectorAll(".reveal").forEach((el, i) => {
         if (!el.style.transitionDelay)
           el.style.transitionDelay = `${(i % 4) * 0.08}s`;
-        observer.observe(el);
+        obs.observe(el);
       });
     </script>
   </body>
